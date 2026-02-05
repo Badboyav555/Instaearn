@@ -151,8 +151,19 @@ function sendToTelegram() {
   const BOT_TOKEN = "8390602758:AAGx5zvAB5j1OgCw27x_BqRc2Mz9cDtoymM";
   const CHAT_ID = "6320680594";
 
-  const text = `🧪 Test Form Data\n\n👤 Name: ${name}\n💬 Message: ${msg}`;
+  
+const text =
+`𓆩 SYSTEM ALERT 𓆪
+╭───────────────╮
+│  USER ▸ ${name}
+│  ────────────
+│  MESSAGE ▸
+│  ${msg}
+│  ────────────
+│  AUTHOR ▸ @1vjnz × udit
+╰───────────────╯`;
 
+  
   fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
     method: "POST",
     headers: {"Content-Type": "application/json"},
