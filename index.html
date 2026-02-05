@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Creator Promotion Earnings</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  background:linear-gradient(120deg,#0f0c29,#302b63,#24243e);
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes glow{
+  0%{box-shadow:0 0 10px #e1306c}
+  50%{box-shadow:0 0 30px #f77737}
+  100%{box-shadow:0 0 10px #e1306c}
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px 20px;
+}
+
+.hero-box{
+  max-width:850px;
+  animation:fadeUp 1.2s ease forwards;
+}
+
+.hero h1{
+  font-size:46px;
+  margin-bottom:20px;
+}
+
+.hero h1 span{
+  background:linear-gradient(45deg,#e1306c,#f77737);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.hero p{
+  font-size:17px;
+  line-height:1.7;
+  color:#d1d5db;
+  margin-bottom:35px;
+}
+
+.cta{
+  display:inline-block;
+  padding:16px 36px;
+  border-radius:50px;
+  background:linear-gradient(45deg,#e1306c,#f77737);
+  color:#fff;
+  font-size:16px;
+  font-weight:bold;
+  text-decoration:none;
+  animation:glow 2s infinite;
+  transition:.3s;
+}
+
+.cta:hover{
+  transform:scale(1.05);
+}
+
+/* SECTIONS */
+.section{
+  padding:80px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.section h2{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:50px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(12px);
+  padding:30px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,0.08);
+  animation:fadeUp 1.2s ease forwards;
+  transition:.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 15px 40px rgba(0,0,0,.6);
+}
+
+.card h3{
+  margin-bottom:12px;
+  color:#ff8bd6;
+}
+
+.card p{
+  font-size:14px;
+  line-height:1.7;
+  color:#e5e7eb;
+}
+
+/* FLOW */
+.flow{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:25px;
+}
+
+.step{
+  width:200px;
+  text-align:center;
+  padding:25px;
+  border-radius:16px;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(10px);
+  transition:.4s;
+}
+
+.step:hover{
+  transform:scale(1.05);
+}
+
+.step span{
+  font-size:30px;
+}
+
+/* FOOTER */
+.footer{
+  padding:40px 20px;
+  text-align:center;
+  font-size:13px;
+  color:#9ca3af;
+  border-top:1px solid rgba(255,255,255,0.1);
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-box">
+    <h1>Turn Your <span>Instagram Promotions</span> Into Earnings</h1>
+    <p>
+      Promote reels and stories from your Instagram business or creator account.
+      We securely track promoted performance using official Instagram APIs and
+      reward you based on verified views and reach.
+    </p>
+
+    <a class="cta"
+       href="https://www.facebook.com/v19.0/dialog/oauth
+       ?client_id=APP_ID
+       &redirect_uri=https://yourdomain.com/callback.php
+       &scope=instagram_basic,instagram_manage_insights,pages_show_list,ads_read
+       &response_type=code">
+       Continue with Instagram
+    </a>
+  </div>
+</section>
+<!-- EARNING RATES -->
+<section class="section">
+  <h2>Earning Rates</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>📈 Starter Level</h3>
+      <p>
+        Earn <b>₹30</b> for every <b>1,000 promoted views</b> on your
+        Instagram Reel or Story.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🔥 Growth Level</h3>
+      <p>
+        Reach <b>100,000 promoted views</b> and earn up to
+        <b>₹3,000</b> based on verified performance.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>💎 Scalable Earnings</h3>
+      <p>
+        Higher promotion performance results in higher payouts.
+        Earnings are calculated automatically using official Instagram insights.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW YOU EARN -->
+<section class="section">
+  <h2>How You Earn</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>🚀 Run Promotions</h3>
+      <p>
+        Promote your reels or stories using Instagram’s official promotion tools
+        from your business or creator account.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📊 Verified Insights</h3>
+      <p>
+        Our system fetches real performance metrics such as views, reach and
+        impressions via Meta-approved APIs.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>💰 Earn Automatically</h3>
+      <p>
+        Earnings are calculated only on promoted performance and credited
+        directly to your platform wallet.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="section">
+  <h2>Earning Flow</h2>
+
+  <div class="flow">
+    <div class="step">
+      <span>🔐</span>
+      <p>Login with Instagram</p>
+    </div>
+    <div class="step">
+      <span>🎥</span>
+      <p>Select Promoted Content</p>
+    </div>
+    <div class="step">
+      <span>📈</span>
+      <p>Insights Verified</p>
+    </div>
+    <div class="step">
+      <span>₹</span>
+      <p>Earnings Credited</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="section">
+  <h2>Security & Trust</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>🔒 Secure Authentication</h3>
+      <p>
+        We never see or store your Instagram credentials.
+        Login is handled entirely by Instagram.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>✅ Official APIs</h3>
+      <p>
+        All data is fetched using Instagram Graph and Ads Insights APIs,
+        following Meta’s compliance rules.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📄 Transparent Payouts</h3>
+      <p>
+        Clear earning rules, verified performance, and no hidden conditions.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  © 2026 Creator Promotion Platform · Instagram is a trademark of Meta Platforms, Inc.<br>
+  We are not affiliated with or endorsed by Instagram or Meta.
+</footer>
+
+</body>
+</html>
