@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>InstaEarn – Creator Monetization Platform</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+
+body{
+  background:#05050f;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* GRADIENT ANIMATION */
+.bg-glow{
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 20%, #6a5cff33, transparent 40%),
+    radial-gradient(circle at 80% 30%, #00ffd533, transparent 40%),
+    radial-gradient(circle at 50% 80%, #ff4ecd33, transparent 40%);
+  animation:moveGlow 12s infinite alternate;
+  z-index:-1;
+}
+@keyframes moveGlow{
+  0%{transform:scale(1)}
+  100%{transform:scale(1.2)}
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:40px 20px;
+}
+.hero h1{
+  font-size:52px;
+  font-weight:700;
+}
+.hero span{
+  background:linear-gradient(90deg,#00ffd5,#6a5cff,#ff4ecd);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.hero p{
+  max-width:700px;
+  margin-top:20px;
+  font-size:20px;
+  opacity:.85;
+}
+.hero .cta{
+  margin-top:40px;
+  padding:18px 50px;
+  border-radius:40px;
+  background:linear-gradient(90deg,#00ffd5,#6a5cff);
+  color:#000;
+  font-size:20px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* SECTION BASE */
+.section{
+  max-width:1100px;
+  margin:140px auto;
+  padding:0 20px;
+}
+.section h2{
+  font-size:38px;
+  margin-bottom:15px;
+}
+.section p{
+  font-size:18px;
+  opacity:.85;
+  line-height:1.7;
+}
+
+/* CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
+.card{
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(16px);
+  border-radius:26px;
+  padding:30px;
+  border:1px solid rgba(255,255,255,0.08);
+  transition:.4s;
+}
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 40px rgba(0,255,213,.25);
+}
+
+/* PROMO SECTIONS */
+.promo{
+  background:rgba(255,255,255,.05);
+  padding:40px;
+  border-radius:30px;
+  margin-top:40px;
+}
+input,select,button{
+  width:100%;
+  margin-top:15px;
+  padding:18px;
+  border-radius:16px;
+  border:none;
+  font-size:16px;
+}
+input,select{
+  background:#0c0c1a;
+  color:#00ffd5;
+}
+button{
+  background:linear-gradient(90deg,#00ffd5,#6a5cff);
+  color:#000;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* STATS */
+.stats{
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  margin-top:50px;
+}
+.stat{
+  text-align:center;
+  margin:20px;
+}
+.stat h3{
+  font-size:40px;
+  color:#00ffd5;
+}
+
+/* FOOTER */
+.footer{
+  padding:60px 20px;
+  text-align:center;
+  opacity:.6;
+}
+</style>
+</head>
+
+<body>
+<div class="bg-glow"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1><span>Monetize</span> Your Instagram Audience</h1>
+  <p>
+    InstaEarn helps creators earn real money by promoting verified
+    brand reels and stories. No fake tasks. No password sharing.
+    Just upload, track views, and withdraw earnings.
+  </p>
+  <button class="cta" onclick="document.getElementById('reel').scrollIntoView({behavior:'smooth'})">
+    Start Earning Now
+  </button>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <h2>How InstaEarn Works</h2>
+  <div class="grid">
+    <div class="card">🔐 Login securely using Instagram authorization</div>
+    <div class="card">🎥 Download Reel or Story promotion content</div>
+    <div class="card">📤 Upload on your Instagram account</div>
+    <div class="card">📊 Views tracked automatically</div>
+    <div class="card">💰 Earnings added to your wallet</div>
+    <div class="card">🏦 Withdraw via UPI or Bank</div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section">
+  <h2>Creator Earnings Overview</h2>
+  <div class="stats">
+    <div class="stat"><h3>₹30</h3><p>Per 1K Views</p></div>
+    <div class="stat"><h3>₹3000</h3><p>Per 100K Views</p></div>
+    <div class="stat"><h3>24h</h3><p>Tracking Update</p></div>
+    <div class="stat"><h3>₹500</h3><p>Min Withdraw</p></div>
+  </div>
+</section>
+
+<!-- REEL PROMOTION -->
+<section class="section" id="reel">
+  <h2>Reel Promotion</h2>
+  <p>
+    Download trending brand reels, upload them with your creative touch
+    and submit your reel link for tracking.
+  </p>
+  <div class="promo">
+    <button>⬇ Download Promo Reel</button>
+    <input placeholder="Paste your Instagram Reel link">
+    <button>Submit Reel for Tracking</button>
+    <p>Status: Pending Review • Views updating</p>
+  </div>
+</section>
+
+<!-- STORY PROMOTION -->
+<section class="section">
+  <h2>Story Promotion</h2>
+  <p>
+    Promote verified links on your Instagram stories and earn based on reach.
+  </p>
+  <div class="promo">
+    <input value="https://promo.company.com/story/abc123" readonly>
+    <button>Copy Story Link</button>
+    <input placeholder="Paste your Story link">
+    <button>Submit Story</button>
+    <p>Status: Verifying • Reach tracking enabled</p>
+  </div>
+</section>
+
+<!-- WALLET -->
+<section class="section">
+  <h2>Wallet & Withdraw</h2>
+  <p>
+    All your earnings are securely stored in your wallet.
+    Withdraw anytime via UPI or bank transfer.
+  </p>
+  <div class="promo">
+    <select>
+      <option>Select Payment Method</option>
+      <option>UPI</option>
+      <option>Bank Transfer</option>
+    </select>
+    <input placeholder="UPI ID / Account Number">
+    <input placeholder="Name">
+    <button>Request Withdraw</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  Secure Instagram Authorization • No Password Stored • © InstaEarn
+</div>
+
+</body>
+</html>
